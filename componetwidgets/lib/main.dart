@@ -9,25 +9,46 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       home: Column(
         children: [
-          Container(
-            height: 200,
-            width: 200,
-            color: Colors.blue,
+          ColorfullContainer(
+            cor: Colors.red,
+            title: 'Box 1',
           ),
-          Container(
-            height: 200,
-            width: 200,
-            color: Colors.blue,
+          ColorfullContainer(
+            cor: Colors.blue,
           ),
-          Container(
-            height: 200,
-            width: 200,
-            color: Colors.blue,
+          ColorfullContainer(
+            cor: Colors.black,
+            title: 'Box 3',
           ),
         ],
+      ),
+    );
+  }
+}
+
+class ColorfullContainer extends StatelessWidget {
+  final Color cor;
+  final String title;
+
+  ColorfullContainer({Key key, this.cor, this.title = ''}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      height: 200,
+      color: cor,
+      alignment: Alignment.center,
+      child: Text(
+        /*'Teste',*/
+        title,
+        style: TextStyle(
+          color: Colors.yellow,
+          fontSize: 25,
+          decoration: TextDecoration.none
+        ),
       ),
     );
   }
