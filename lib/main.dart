@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
             cor: Colors.blue,
           ),
           ColorfullContainer(
-            cor: Colors.black,
+            cor: Colors.white,
             title: 'Box 3',
           ),
         ],
@@ -37,8 +37,8 @@ class ColorfullContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 200,
-      height: 200,
+      width: 180,
+      height: 180,
       color: cor,
       alignment: Alignment.center,
       child: Text(
